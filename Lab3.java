@@ -32,16 +32,16 @@ public class Lab3 {
 	        		char c=')';
 	        		if(result.charAt(i)==c) {
 	        			temp=line.split(",")[3];
-	        			temp = temp.replaceAll("^\"+|\"+$", "");
+	        			temp = temp.replaceAll("^\"+|\"+$", "");// Fixing up with regex to get rid of quotation and whitespace
 	        			temp=temp.replaceAll("\\s+","");
 	        			result = temp;
 	        			break;
 	        		}
 	        	}
 	        	String tem=new String(result);
-	        	nameSet.add(tem); 
+	        	nameSet.add(tem); // Adding tem to the HashSet nameSet
 	        	}
-	        	for(String artist : nameSet ) {
+	        	for(String artist : nameSet ) { // For every artist in nameSet adding an artist into the linked list
 	        		list.add(artist);
 	        	}
 	        	Collections.sort(list);// Sorts the artists in Alphabetical order
