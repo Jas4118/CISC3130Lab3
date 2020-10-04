@@ -17,9 +17,9 @@ import java.util.Set;
 public class Lab3 {
 	
 	public static void main(String[]args) throws IOException {
-			FileReader fr = new FileReader("regional-global-daily-latest.csv"); //Have to use BufferedReader because it stopped reading when I used Scanner
+		FileReader fr = new FileReader("regional-global-daily-latest.csv"); //Have to use BufferedReader because it stopped reading when I used Scanner
 	        BufferedReader br = new BufferedReader(fr);
-	        File output= new File(("Artists-WeekOf09062020.txt")); 
+	        File output= new File(("TopStreamingArtists.txt")); 
 	        PrintWriter outputWriter = new PrintWriter(output);
 	        br.readLine();
 	        br.readLine();
