@@ -22,11 +22,11 @@ public class Lab3 {
 	        br.readLine();
 	        br.readLine();
 	        HashSet<String> nameSet = new HashSet<String>(); //Creating a hashset to put all my data in
-	        LinkedList<String> list = new LinkedList<String>();
+	        LinkedList<String> list = new LinkedList<String>(); //Linked List I'm putting my artist strings in
 	        for (String line = br.readLine(); line != null; line = br.readLine()) {
 	        	String temp=line.split(",")[2]; // Sets the line with the artist name
 	        	String result = temp.replaceAll("^\"+|\"+$", "");
-	        	for(int i=0; i<result.length();i++) { // Loop to check for parenthesis so artist name is next
+	        	for(int i=0; i<result.length();i++) { // Loop to check for parenthesis just so it doesn't take some weird string
 	        		char c=')';
 	        		if(result.charAt(i)==c) {
 	        			temp=line.split(",")[3];
@@ -44,11 +44,11 @@ public class Lab3 {
 	        	}
 	        	Collections.sort(list);// Sorts the artists in Alphabetical order
 
-	        	for(String artist : list ) { //Prints to outputF the toString from artistName
+	        	for(String artist : list ) { //Prints to System.out each artist name
 	        		System.out.println(artist);
 	        	}
 	        
-	        	for(String artist : list ) { //Prints to outputF the toString from artistName
+	        	for(String artist : list ) { //Prints to outputF each artist name
 	        		outputWriter.println(artist);
 	        	}
 	        br.close();
